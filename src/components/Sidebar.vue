@@ -4,6 +4,7 @@
     <nav class="main-nav">
       <ul class="main-list">
         <li class="list"><router-link to="/contador">Contador</router-link></li>
+        <li class="list"><router-link to="/lista-de-tareas">Lista De Tareas</router-link></li>
       </ul>
     </nav>
   </div>

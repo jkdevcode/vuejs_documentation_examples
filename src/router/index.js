@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Contador from "@/modules/contador/components/Contador.vue";
+import ListaDeTareas from "@/modules/listaDeTareas/components/ListaDeTareas.vue";
 
 const routes = [
   // {
@@ -11,6 +12,11 @@ const routes = [
     path: "/contador",
     name: "contador",
     component: Contador
+  },
+  {
+    path: "/lista-de-tareas",
+    name: "Lista De Tareas",
+    component: ListaDeTareas
   },
 ];
 
