@@ -18,14 +18,20 @@
   const texto = ref('') */
   </script>
 
-  <style>
-  .container {
-    flex-direction: row;
-  }
-  .content {
-   display: flex;
-   justify-content: center;
-    align-items: center;
-  }
-  </style>
+<style scoped>
+.container {
+  display: flex; /* Alinea Sidebar y Content horizontalmente */
+  flex-direction: row;
+  margin-left: 10px;
+  /* background-color: rgb(212, 227, 239); */
+}
 
+.content {
+  flex: 1; /* Ocupa el espacio restante */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinea el contenido arriba */
+  padding: 20px; /* Espaciado interno para separación */
+  box-sizing: border-box; /* Incluye padding en el tamaño total */
+}
+</style>

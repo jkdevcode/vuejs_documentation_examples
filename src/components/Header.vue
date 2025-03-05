@@ -1,8 +1,8 @@
 <template>
   <div class="header">
-  {{ mensajeRecibido }}  <Weather />
+    <h1>{{ mensajeRecibido }}</h1>
+    <Weather />
   </div>
-
 </template>
 
 <script setup>
@@ -18,13 +18,23 @@ watch(() => propsMsg.msg, (newValue) => {
 
 <style scoped>
 .header {
-  background-color: #cac9c9;
-  padding: 10px 0;
-  border-radius: 10px;
+  background: linear-gradient(145deg, #1e1e2f, #2a2a3d);
+  padding: 20px;
+  border-radius: 16px;
   text-align: center;
-  margin: 5px;
+  margin: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
 }
-.h1 {
-  font-size: 20px;
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 </style>

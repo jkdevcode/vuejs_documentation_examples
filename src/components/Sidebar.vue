@@ -1,6 +1,5 @@
 <template>
   <div class="sidebar">
-    <!-- <h2>Barra lateral</h2> -->
     <nav class="main-nav">
       <ul class="main-list">
         <li class="list"><router-link to="/contador">Contador</router-link></li>
@@ -8,8 +7,10 @@
         <li class="list"><router-link to="/registrar">Registrar</router-link></li>
         <li class="list"><router-link to="/calcular">Calcular</router-link></li>
       </ul>
-      <h3>Nombre: {{ registrarStore.nombre }}</h3> <!-- cuando imprimimos una variable reactiva, no es necesario el .value -->
-      <h3>Email: {{ registrarStore.email }}</h3>
+      <div class="user-info">
+        <h3>Nombre: {{ registrarStore.nombre }}</h3>
+        <h3>Email: {{ registrarStore.email }}</h3>
+      </div>
     </nav>
   </div>
 </template>
@@ -32,34 +33,53 @@ const registrarStore = useRegistrarStore();
 </script>
 
 <style scoped>
+.sidebar {
+  background: linear-gradient(145deg, #1e1e2f, #2a2a3d);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  color: #ffffff;
+  max-width: 300px;
+  min-height:75vh;
+}
+
 .main-nav {
-  background-color: #a3a3a3;
-  padding: 20px 0;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .main-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: left;
-
 }
 
 .main-list li {
-  display: inline;
-  margin: 0 15px;
-  font-size: 20px;
+  margin: 10px 0;
 }
 
 .main-list li a {
   color: white;
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 5px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: block;
+  transition: background 0.3s;
 }
 
 .main-list li a:hover {
-  background-color: #555;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.user-info {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h3 {
+  font-size: 18px;
+  margin: 5px 0;
 }
 </style>
