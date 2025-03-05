@@ -43,7 +43,6 @@ const borraTarea = (index) => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
   font-family: sans-serif;
 }
 ul {

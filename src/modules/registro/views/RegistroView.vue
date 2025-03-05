@@ -42,7 +42,6 @@ const submitForm = () => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Centra verticalmente en la pantalla */
   font-family: sans-serif;
 }
 
