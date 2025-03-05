@@ -3,7 +3,10 @@
     <h3>Propiedades Computadas</h3>
     <input type="text" v-model="valor" class="input-valor" placeholder="Escribe algo..." />
     <p class="valor-mostrado">{{ valorCalculado }}</p>
-    <ResultadoSection :resultado="valorCalculado" />
+    <ResultadoSection  v-if="mostrarElemento" :resultado="valorCalculado" />
+    <!-- <ResultadoSection  v-show="mostrarElemento" :resultado="valorCalculado" /> -->
+    <p v-else-if="isNaN(valor)">Dese ser un número para calcular</p>
+    <p v-else>Aqui no hay nada ;D</p>
   </div>
 </template>
 
@@ -11,10 +14,14 @@
 import { ref, computed } from 'vue';
 import ResultadoSection from '../components/ResultadoSection.vue';
 
-
 const valor = ref('');
-const valorCalculado = computed(()=> {
+
+const valorCalculado = computed(() => {
   return valor.value * 3
+})
+
+const mostrarElemento = computed(() => {
+  return valor.value > 10
 })
 </script>
 
