@@ -18,13 +18,13 @@ import { useRegistrarStore } from '@/modules/registro/stores/registrarStore';
 import { ref, watch } from 'vue'
 
 const registrarStore = useRegistrarStore();
-const nombre = ref(registrarStore.nombre.value);
-const email = ref(registrarStore.email.value);
+const nombre = ref(registrarStore.nombre);
+const email = ref(registrarStore.email);
 
-watch(registrarStore.nombre, (newValue) => {
+watch(() => registrarStore.nombre, (newValue) => {
   nombre.value = newValue;
 });
-watch(registrarStore.email, (newValue) => {
+watch(() => registrarStore.email, (newValue) => {
   email.value = newValue;
 });
 
