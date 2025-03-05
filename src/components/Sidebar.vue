@@ -6,6 +6,7 @@
         <li class="list"><router-link to="/contador">Contador</router-link></li>
         <li class="list"><router-link to="/lista-de-tareas">Lista De Tareas</router-link></li>
         <li class="list"><router-link to="/registrar">Registrar</router-link></li>
+        <li class="list"><router-link to="/calcular">Calcular</router-link></li>
       </ul>
       <h3>Nombre: {{ registrarStore.nombre }}</h3> <!-- cuando imprimimos una variable reactiva, no es necesario el .value -->
       <h3>Email: {{ registrarStore.email }}</h3>
